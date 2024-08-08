@@ -1,0 +1,6 @@
+@BinarTestMandiri_HostAddress = http://localhost:5012
+
+GET {{BinarTestMandiri_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
