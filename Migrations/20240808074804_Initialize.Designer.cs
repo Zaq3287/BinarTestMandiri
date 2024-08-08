@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BinarTestMandiri.Migrations
 {
     [DbContext(typeof(LibraryContext))]
-    [Migration("20240808064514_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240808074804_Initialize")]
+    partial class Initialize
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,10 +27,7 @@ namespace BinarTestMandiri.Migrations
             modelBuilder.Entity("BinarTestMandiri.Models.Book", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
